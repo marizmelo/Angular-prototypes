@@ -1,0 +1,29 @@
+{
+  "name": "angular-prototypes",
+  "version": "0.0.0",
+  "homepage": "https://github.com/marizmelo/angular-prototypes",
+  "authors": [
+    "Mariz Melo"
+  ],
+  "description": "AngularJS prototype barebones framework",
+  "main": "server.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "prototypes",
+    "angularjs",
+    "angular",
+    "bootstrap",
+    "bower"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
