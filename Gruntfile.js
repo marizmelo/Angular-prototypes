@@ -37,12 +37,20 @@ module.exports = function (grunt) {
           useAvailablePort: true
         }
       }
+    },
+    uglify: {
+      my_target: {
+        files: {
+          'dist/scripts/scripts.min.js': ['app/**/*.js']
+        }
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', ['jshint', 'cssmin', 'connect']);
 };
