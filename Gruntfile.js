@@ -44,6 +44,21 @@ module.exports = function (grunt) {
           'dist/scripts/scripts.min.js': ['app/**/*.js']
         }
       }
+    },
+    jade: {
+      compile: {
+        options: {
+          client: false,
+          pretty: true
+        },
+        files: [ {
+          cwd: "app/views",
+          src: "**/*.jade",
+          dest: "dist/views",
+          expand: true,
+          ext: ".html"
+        } ]
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -51,6 +66,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jade');
 
-  grunt.registerTask('default', ['jshint', 'cssmin', 'connect']);
+  grunt.registerTask('default', ['jshint', 'cssmin', 'jade', 'connect']);
 };
