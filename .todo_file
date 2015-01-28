@@ -1,3 +1,7 @@
++ https://github.com/nDmitry/grunt-autoprefixer
++ https://github.com/jmreidy/grunt-browserify
 + https://github.com/karlgoldstein/grunt-html2js
 + https://github.com/gruntjs/grunt-contrib-concat
 + https://github.com/intesso/connect-livereload
+- https://github.com/gruntjs/grunt-contrib-jade
+- https://github.com/stephenplusplus/grunt-wiredep

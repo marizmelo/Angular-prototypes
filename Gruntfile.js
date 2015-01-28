@@ -59,6 +59,11 @@ module.exports = function (grunt) {
           ext: ".html"
         } ]
       }
+    },
+    wiredep: {
+      target: {
+        src: 'app/index.html'
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -67,6 +72,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-wiredep');
 
-  grunt.registerTask('default', ['jshint', 'cssmin', 'jade', 'connect']);
+  grunt.registerTask('default', ['jshint', 'cssmin', 'jade', 'wiredep', 'connect']);
 };
