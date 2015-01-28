@@ -1,7 +1,8 @@
-+ https://github.com/nDmitry/grunt-autoprefixer
++ grunt to copy index.html from app/ to dist/ folder
 + https://github.com/jmreidy/grunt-browserify
 + https://github.com/karlgoldstein/grunt-html2js
 + https://github.com/gruntjs/grunt-contrib-concat
 + https://github.com/intesso/connect-livereload
 - https://github.com/gruntjs/grunt-contrib-jade
 - https://github.com/stephenplusplus/grunt-wiredep
+- https://github.com/nDmitry/grunt-autoprefixer

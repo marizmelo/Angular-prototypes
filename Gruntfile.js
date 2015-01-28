@@ -64,6 +64,13 @@ module.exports = function (grunt) {
       target: {
         src: 'app/index.html'
       }
+    },
+    autoprefixer: {
+      dist: {
+        files: {
+          'app/styles/styles.css': 'app/styles/styles.css'
+        }
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -73,6 +80,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-wiredep');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['jshint', 'cssmin', 'jade', 'wiredep', 'connect']);
+  grunt.registerTask('default', ['jshint', 'jade', 'autoprefixer', 'cssmin', 'wiredep', 'connect']);
 };
