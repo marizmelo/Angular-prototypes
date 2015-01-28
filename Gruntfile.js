@@ -66,10 +66,11 @@ module.exports = function (grunt) {
       }
     },
     autoprefixer: {
-      dist: {
-        files: {
-          'app/styles/styles.css': 'app/styles/styles.css'
-        }
+      multiple_files: {
+        expand: true,
+        flatten: true,
+        src: 'app/styles/*.css', // -> src/css/file1.css, src/css/file2.css
+        dest: 'app/styles/' // -> dest/css/file1.css, dest/css/file2.css
       }
     }
   });
