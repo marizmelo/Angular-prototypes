@@ -101,6 +101,11 @@ module.exports = function (grunt) {
   });
   require('load-grunt-tasks')(grunt);
 
-  //grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
+  grunt.registerTask('alldone', function() {
+    grunt.log.writeln('Your dist/ folder is ready for production.');
+  });
+
+  grunt.registerTask('build', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'bower_concat', 'uglify', 'alldone']);
+  //grunt.registerTask('dev', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
   grunt.registerTask('default', ['connect']);
 };
