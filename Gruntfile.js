@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/scripts/scripts.min.js': ['app/**/*.js']
+          'dist/scripts/scripts.min.js': ['app/**/*.js', 'dist/scripts/bower.js']
         }
       }
     },
@@ -62,7 +62,10 @@ module.exports = function (grunt) {
     },
     wiredep: {
       target: {
-        src: 'app/index.html'
+        src: 'app/index.html',
+        ignorePath: '../',
+        dependencies: true,
+        devDependencies: false
       }
     },
     autoprefixer: {
@@ -89,19 +92,14 @@ module.exports = function (grunt) {
       {cwd: 'app', src: 'index.html', dest: 'dist', expand: true}
         ]
       }
+    },
+    bower_concat: {
+      all: {
+        dest: 'dist/scripts/bower.js'
+      }
     }
   });
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-wiredep');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-menu');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'uglify', 'autoprefixer', 'cssmin', 'wiredep', 'copy', 'connect']);
+  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
 };
