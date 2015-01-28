@@ -101,5 +101,6 @@ module.exports = function (grunt) {
   });
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
+  //grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
+  grunt.registerTask('default', ['connect']);
 };
