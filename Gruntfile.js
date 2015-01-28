@@ -93,6 +93,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-menu');
 
   grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'uglify', 'autoprefixer', 'cssmin', 'wiredep', 'connect']);
 };
