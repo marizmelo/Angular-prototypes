@@ -1,4 +1,3 @@
-+ fix error compiling uglifyjs, jshint does not like that
 + https://github.com/kmiyashiro/grunt-mocha
 + grunt to copy index.html from app/ to dist/ folder
 + https://github.com/jmreidy/grunt-browserify
@@ -8,3 +7,4 @@
 - https://github.com/gruntjs/grunt-contrib-jade
 - https://github.com/stephenplusplus/grunt-wiredep
 - https://github.com/nDmitry/grunt-autoprefixer
+- fix error compiling uglifyjs, jshint does not like that
