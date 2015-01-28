@@ -72,6 +72,16 @@ module.exports = function (grunt) {
         src: 'app/styles/*.css',
         dest: 'app/styles/'
       }
+    },
+    coffee: {
+      compileJoined: {
+        options: {
+          join: true
+        },
+        files: {
+          'app/scripts/coffee.js': 'app/scripts/*.coffee'
+        }
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -82,6 +92,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
-  grunt.registerTask('default', ['jshint', 'jade', 'autoprefixer', 'cssmin', 'wiredep', 'connect']);
+  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'uglify', 'autoprefixer', 'cssmin', 'wiredep', 'connect']);
 };
