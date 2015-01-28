@@ -69,8 +69,8 @@ module.exports = function (grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'app/styles/*.css', // -> src/css/file1.css, src/css/file2.css
-        dest: 'app/styles/' // -> dest/css/file1.css, dest/css/file2.css
+        src: 'app/styles/*.css',
+        dest: 'app/styles/'
       }
     }
   });
