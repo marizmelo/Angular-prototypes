@@ -82,6 +82,13 @@ module.exports = function (grunt) {
           'app/scripts/coffee.js': 'app/scripts/*.coffee'
         }
       }
+    },
+    copy: {
+      main: {
+        files: [
+      {cwd: 'app', src: 'index.html', dest: 'dist', expand: true}
+        ]
+      }
     }
   });
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -94,6 +101,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-menu');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'uglify', 'autoprefixer', 'cssmin', 'wiredep', 'connect']);
+  grunt.registerTask('default', ['jshint', 'jade', 'coffee', 'uglify', 'autoprefixer', 'cssmin', 'wiredep', 'copy', 'connect']);
 };
