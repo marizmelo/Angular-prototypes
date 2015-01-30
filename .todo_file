@@ -1,3 +1,5 @@
++ build xtyle package manager
++ consider change from bower to component, see pros and cons
 + task for development (livereload+connect)
 + task for test (mocha or karma)
 + https://github.com/kmiyashiro/grunt-mocha
