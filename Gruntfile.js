@@ -35,7 +35,8 @@ module.exports = function (grunt) {
           appName: 'Chrome',
           keepalive: true,
           open: true,
-          useAvailablePort: true
+          livereload: true
+          //useAvailablePort: true
         }
       }
     },
@@ -103,7 +104,7 @@ module.exports = function (grunt) {
   });
   //REMOVED
   //clean: ["app/scripts/*.*", "app/styles/*.*"]
-  
+
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('alldone', function() {
