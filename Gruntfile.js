@@ -5,7 +5,8 @@ module.exports = function (grunt) {
       options: {
         globals: {
           jQuery: true
-        }
+        },
+        ignores : ['app/scripts/bower.js']
       }
     },
     watch: {
@@ -41,7 +42,7 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/scripts/scripts.min.js': ['app/**/*.js', 'dist/scripts/bower.js']
+          'dist/scripts/scripts.min.js': ['app/**/*.js']
         }
       }
     },
@@ -95,10 +96,14 @@ module.exports = function (grunt) {
     },
     bower_concat: {
       all: {
-        dest: 'dist/scripts/bower.js'
+        dest: 'app/scripts/bower.js',
+        cssDest: 'app/styles/bower.css'
       }
     }
   });
+  //REMOVED
+  //clean: ["app/scripts/*.*", "app/styles/*.*"]
+  
   require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('alldone', function() {
