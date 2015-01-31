@@ -2,6 +2,11 @@
 
 AngularJS prototype barebones framework
 
+##Install
+
+1. Install NodeJS
+2. Run NPM packages: **npm install**
+
 ##Build
 
 Build distribution files:
