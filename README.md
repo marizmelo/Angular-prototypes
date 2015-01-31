@@ -10,7 +10,7 @@ Build distribution files:
 
 ##Distribute
 
-Just Copy the *dis/* folder into your webserver.
+Just Copy the *dist/* folder into your webserver.
 
 If you want to test the distribution files at *dist/*, execute the following command:
 
