@@ -2,6 +2,14 @@
 
 AngularJS prototype barebones framework
 
-Executing the program will load *dist/index.html*:
+##Build
+
+Build distribution files:
+
+    $ grunt build
+
+##Distribute
+
+Testing the distribution files at *dist/index.html*:
 
     $ grunt
