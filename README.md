@@ -10,6 +10,8 @@ Build distribution files:
 
 ##Distribute
 
-Testing the distribution files at *dist/index.html*:
+Just Copy the *dis/* folder into your webserver.
+
+If you want to test the distribution files at *dist/*, execute the following command:
 
     $ grunt
