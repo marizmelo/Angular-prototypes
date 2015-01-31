@@ -100,6 +100,11 @@ module.exports = function (grunt) {
         dest: 'app/scripts/bower.js',
         cssDest: 'app/styles/bower.css'
       }
+    },
+    shell: {
+      server: {
+        command: 'node server'
+      }
     }
   });
   //REMOVED
@@ -113,5 +118,5 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'bower_concat', 'uglify', 'alldone']);
   //grunt.registerTask('dev', ['jshint', 'jade', 'coffee', 'autoprefixer', 'cssmin', 'wiredep', 'bower_concat', 'uglify', 'connect']);
-  grunt.registerTask('default', ['connect']);
+  grunt.registerTask('default', ['shell']);
 };
